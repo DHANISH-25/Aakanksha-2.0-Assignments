@@ -1,0 +1,248 @@
+1. Write a Java program to declare `name`, `rollNo`, and `marks` as instance variables inside a `Student` class. Assign suitable values to the variables and display the student's name, roll number, and marks.
+
+CODE:
+public class Student {
+    String name = "Dhanish kumar";
+    int rollNo = 56;
+    double marks = 99.9;
+    public static void main(String[] args) {
+        Student student = new Student();
+        System.out.println(student.name);
+        System.out.println(student.rollNo);
+        System.out.println(student.marks);
+    }
+        
+}
+
+OUTPUT:
+Dhanish kumar
+56
+99.9
+
+2. Write a Java program to declare `collegeName` as a static variable inside a `Student` class. Assign a suitable value to the static variable and display the college name.
+
+CODE:
+public class DisplayCollegeName {
+    public static void main(String[] args) {
+        String collegeName = "SEEMANTA ENGINEERING COLLEGE";
+        System.out.println("College Name: " + collegeName);
+    }
+}
+
+OUTPUT:
+College Name: SEEMANTA ENGINEERING COLLEGE
+
+3. Write a Java program to declare two local variables inside a method. Store two numbers in the variables, calculate their sum using another local variable, and display the result.
+
+CODE:
+public class Math {
+
+    public void values(){
+        int val1 = 24;
+        int val2 = 46;
+        
+        int result = val1 + val2;
+        System.out.println("Sum of " + val1 + " and " + val2 + " is:" + result );
+    }
+    public static void main(String[] args) {
+        Math display = new Math();
+        display.values();
+    }
+}
+
+OUTPUT:
+Sum of 24 and 46 is:70
+
+4. Write a Java program to create a method named `displayStudent()` that accepts the student's `name`, `age`, and `marks` as parameters. Display all the values received by the method.
+
+CODE:
+public class MethodCall {
+
+    void displayStudent(String name, int age, double marks){
+
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Marks: " + marks);
+    }
+
+    public static void main(String[] args) {
+        MethodCall student = new MethodCall();
+        student.displayStudent("Dhanish Kumar", 24, 98.6);
+    }
+}
+
+OUTPUT:
+Name: Dhanish Kumar
+Age: 24
+Marks: 98.6
+
+5. Write a Java program to declare `name`, `id`, and `salary` as instance variables inside an `Employee` class. Assign suitable values to the variables using a method and display the employee details.
+
+CODE:
+public class Employee {
+    String name;
+    int id;
+    double salary;
+    void employeeDetails(String name, int id, double salary){
+        this.name = name;
+        this.id = id;
+        this.salary = salary;
+
+        System.out.println("Name: " + this.name);
+        System.out.println("ID: " + this.id);
+        System.out.println("Salary: " + this.salary);
+    }
+
+    public static void main(String[] args) {
+        Employee e1 = new Employee();
+        e1.employeeDetails("Dhanish Kumar", 4576, 46000);
+    }
+
+OUTPUT:
+Name: Dhanish Kumar
+ID: 4576
+Salary: 46000.0
+
+6. Write a Java program to declare `accountHolder` and `balance` as instance variables and `bankName` as a static variable. Assign suitable values to all the variables and display the complete bank account details.
+
+CODE:
+public class Banking {
+    static String bankName = "Bank of India";
+    String accountHolder = "Dhanish kumar";
+    double balance = 20000.0;
+
+    void accountDetails() {
+        System.out.println(bankName);
+        System.out.println(accountHolder);
+        System.out.println(balance);
+    }
+
+    public static void main(String[] args) {
+        Banking info = new Banking();
+        info.accountDetails();
+    }
+}
+
+OUTPUT:
+Bank of India
+Dhanish kumar
+20000.0
+
+
+7. Write a Java program to create a method named `calculateArea()` that accepts `length` and `breadth` as parameters. Calculate the area of the rectangle using a local variable and display the result.
+
+CODE:
+public class CalculateArea {
+    double length;
+    double breadth;
+    double area;
+    void calculateRectangleArea(double length, double breadth){
+        area = length * breadth;
+        System.out.println("Area of the Rectangle is: " + area);
+    }
+
+    public static void main(String[] args) {
+        CalculateArea value = new CalculateArea();
+        value.calculateRectangleArea(3.5,2.5);
+
+    }
+}
+
+OUTPUT:
+Area of the Rectangle is: 8.75
+
+8. Write a Java program to declare `studentName` as an instance variable and `collegeName` as a static variable. Create a method that accepts three subject marks as parameters. Calculate the total marks using a local variable and display the student's complete details.
+
+CODE:
+public class StudentDetails {
+    static String collegeName = "SEEMANTA ENGINEERING COLLEGE";
+    String studentName = "Dhanish kumar";
+
+    void subjectMarks(int math, int chemistry, int physics){
+        int totalMarks = math + chemistry + physics;
+        System.out.println("student Name: " + studentName);
+        System.out.println("college name : " + collegeName);
+        System.out.println("Total marks of math, physics and science is: " + totalMarks);
+    }
+
+    public static void main(String[] args) {
+        StudentDetails marks = new StudentDetails();
+        marks.subjectMarks(76,85,68);
+    }
+}
+
+OUTPUT:
+student Name: Dhanish kumar
+college name : SEEMANTA ENGINEERING COLLEGE
+Total marks of math, physics and science is: 229
+
+9. Write a Java program to declare `employeeName` and `basicSalary` as instance variables and `companyName` as a static variable. Create a method that accepts the basic salary as a parameter. Calculate `HRA`, `DA`, and `totalSalary` using local variables and display all the salary details.
+
+CODE:
+public class SalaryCalculator {
+    String employeeName = "Dhanish kumar";
+    double basicSalary;
+    static String companyName = "Tata Consultancy Services Ltd.";
+
+    void salaryinput(double basicSalary){
+        double hra = basicSalary * 0.20;
+        double da = basicSalary * 0.10;
+        double totalSalary = hra + da + basicSalary;
+        System.out.println("Company name: " + companyName);
+        System.out.println("Employee name: " + employeeName);
+        System.out.println("HRA: " + hra);
+        System.out.println("DA: " + da);
+        System.out.println("Employee total salary: " + totalSalary);     
+    }
+
+    public static void main(String[] args) {
+        SalaryCalculator empsal = new SalaryCalculator();
+        empsal.salaryinput(45000.0);
+    }
+}
+
+OUTPUT:
+Company name: Tata Consultancy Services Ltd.
+Employee name: Dhanish kumar
+HRA: 9000.0
+DA: 4500.0
+Employee total salary: 58500.0
+
+10. Write a Java program to declare `studentName` and `rollNo` as instance variables and `collegeName` as a static variable. Create a method that accepts marks of three subjects as parameters. Calculate the `total` and `percentage` using local variables. Check whether the percentage is **40% or above** and display `PASS`; otherwise, display `FAIL`.
+
+CODE:
+public class Condition {
+    String studentName = "Dhanish Kumar";
+    int rollNo = 56;
+    static String collegeName = "SEEMANTA ENGINEERING COLLEGE";
+
+    void subjectMarks(int sub1, int sub2, int sub3){
+        int total = sub1 + sub2 + sub3;
+        double percentage = (total/300.0) * 100;
+
+        System.out.println("College name: " + collegeName);
+        System.out.println("Student name: " + studentName);
+        System.out.println("Roll No: " + rollNo);
+        System.out.println("Total Marks: " + total);
+        System.out.println("Percentage: " + percentage);
+
+        if (percentage >= 40.0) {
+            System.out.println("Result: PASS");
+        }else{
+            System.out.println("Result: FAIL");
+        }
+    }
+
+    public static void main(String[] args) {
+        Condition display = new Condition();
+        display.subjectMarks(85, 65, 39);
+    }
+}
+
+OUTPUT:
+College name: SEEMANTA ENGINEERING COLLEGE
+Student name: Dhanish Kumar
+Roll No: 56
+Total Marks: 189
+Percentage: 63.0
+Result: PASS
