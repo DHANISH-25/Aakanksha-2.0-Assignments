@@ -30,13 +30,14 @@ class Vehicle {
             System.out.println("Discount: " + discount);
             System.out.println("Your Total Rental Amount: " + totalRentalAmount);
         } else {
-            System.out.println("Your Total Rental Amount: " + totalRentalAmount);
+            System.out.println("Your are not eligible for discount.");
         }
     }
 
     public static void main(String[] args) {
         Vehicle vc = new Vehicle("54DK648", "2458Supra", 256.00, 6);
-
+        System.out.println("Vehicle Number: " + vc.vehicleNumber);
+        System.out.println("Vehicle Model: " + vc.vehicleModel);
         vc.totalRentalAmount();
         vc.discount();
     }
